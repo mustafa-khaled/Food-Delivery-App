@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { headerLinks } from "../data/staticData";
 import { MdShoppingBasket } from "react-icons/md";
+import { motion } from "framer-motion";
 
 import Container from "./Container";
 import logoImage from "../assets/logo.png";
@@ -13,7 +14,9 @@ function Header() {
         {/* Desktop & Tablet */}
         <div className="hidden h-full w-full items-center justify-between gap-8 md:flex">
           {/* Logo  */}
-          <img src={logoImage} alt="LogoImage" className="w-[100px]" />
+          <Link to="/">
+            <img src={logoImage} alt="LogoImage" className="w-[100px]" />
+          </Link>
 
           {/* Links */}
           <ul className=" flex items-center gap-[20px]">
@@ -21,7 +24,7 @@ function Header() {
               return (
                 <li
                   key={l.id}
-                  className="hover:text-yellow  text-base font-bold"
+                  className="text-base  font-bold hover:text-yellow"
                 >
                   <NavLink to={l.to}>{l.title}</NavLink>
                 </li>
@@ -34,17 +37,22 @@ function Header() {
             <div className="relative cursor-pointer">
               <MdShoppingBasket className="text-2xl" />
               <span
-                className="bg-yellow absolute right-[-8px] top-[-5px] flex h-[18px] 
-              w-[18px] items-center justify-center rounded-full text-sm font-bold"
+                className="absolute right-[-8px] top-[-5px] flex h-[18px] w-[18px] 
+              items-center justify-center rounded-full bg-yellow text-sm font-bold"
               >
                 3
               </span>
             </div>
-            <img
-              src={avatarImage}
-              alt="User Avatar"
-              className="w-[30px] drop-shadow-xl"
-            />
+            {/* User Image  */}
+
+            <div className="relative cursor-pointer">
+              <motion.img
+                whileTap={{ scale: 0.6 }}
+                src={avatarImage}
+                alt="User Avatar"
+                className="w-[30px] drop-shadow-xl"
+              />
+            </div>
           </div>
         </div>
         {/* Mobile */}

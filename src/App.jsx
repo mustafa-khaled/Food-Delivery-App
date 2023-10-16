@@ -1,17 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import { Header, MainContainer, CreateContainer } from "./components";
+import { AnimatePresence } from "framer-motion";
+import LoginForm from "./components/LoginForm";
 
 function App() {
   return (
-    <div className="bg-gray flex  h-screen  w-screen flex-col text-textColor">
-      <Header />
-      <main className="mt-[60px] bg-red-400">
-        <Routes>
-          <Route path="/" element={<MainContainer />} />
-          <Route path="/createItem" element={<CreateContainer />} />
-        </Routes>
-      </main>
-    </div>
+    <AnimatePresence>
+      <div className="flex h-screen  w-screen  flex-col bg-gray text-textColor">
+        <Header />
+        <main className="mt-[60px] bg-red-400">
+          <Routes>
+            <Route path="/" element={<MainContainer />} />
+            <Route path="/createItem" element={<CreateContainer />} />
+            <Route path="/login" element={<LoginForm />} />
+          </Routes>
+        </main>
+      </div>
+    </AnimatePresence>
   );
 }
 

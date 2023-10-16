@@ -23,3 +23,18 @@ export const headerLinks = [
     to: "/services",
   },
 ];
+
+export const loginFormData = [
+  {
+    id: 1,
+    title: "Email",
+    name: "email",
+    type: "text",
+  },
+  {
+    id: 2,
+    title: "Password",
+    name: "password",
+    type: "password",
+  },
+];
