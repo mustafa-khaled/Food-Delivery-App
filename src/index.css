@@ -19,3 +19,9 @@ body {
 body {
   font-family: "Poppins", sans-serif;
 }
+
+@layer components {
+  .input {
+    @apply w-[300px] rounded-xl border-b bg-gray p-[8px] outline-none placeholder:text-sm focus:border-yellow md:w-[400px];
+  }
+}
