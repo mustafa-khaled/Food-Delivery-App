@@ -1,10 +1,7 @@
-import { NavLink } from "react-router-dom";
-import { headerLinks } from "../../data/staticData";
-import { MdShoppingBasket } from "react-icons/md";
-import { motion } from "framer-motion";
-
 import Logo from "./Logo";
 import Avatar from "./Avatar";
+import HeaderLinks from "./HeaderLinks";
+import CartIcon from "./CartIcon";
 
 function DesktopView({ setShowConfirmDelete }) {
   return (
@@ -13,32 +10,11 @@ function DesktopView({ setShowConfirmDelete }) {
       <Logo />
 
       {/* Links */}
-      <motion.ul
-        initial={{ opacity: 0, x: 200 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 200 }}
-        className=" flex items-center gap-[20px]"
-      >
-        {headerLinks.map((l) => {
-          return (
-            <li key={l.id} className="text-base  font-bold hover:text-yellow">
-              <NavLink to={l.to}>{l.title}</NavLink>
-            </li>
-          );
-        })}
-      </motion.ul>
+      <HeaderLinks styles={"flex items-center gap-[20px]"} />
 
       {/* Cart Icon & User Image */}
       <div className="flex items-center gap-[20px]">
-        <div className="relative cursor-pointer">
-          <MdShoppingBasket className="text-2xl" />
-          <span
-            className="absolute right-[-8px] top-[-5px] flex h-[18px] w-[18px]
-              items-center justify-center rounded-full bg-yellow text-sm font-bold"
-          >
-            3
-          </span>
-        </div>
+        <CartIcon />
         {/* User Image  */}
         <Avatar setShowConfirmDelete={setShowConfirmDelete} />
       </div>
