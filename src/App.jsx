@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import { Header, MainContainer, CreateContainer, AuthForm } from "./components";
+import { Header, AuthForm } from "./components";
 import { AnimatePresence } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setUser } from "./redux/features/authSlice";
+import { Home } from "./pages";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,8 +22,7 @@ function App() {
         <Header />
         <main className="mt-[60px]">
           <Routes>
-            <Route path="/" element={<MainContainer />} />
-            <Route path="/createItem" element={<CreateContainer />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<AuthForm />} />
           </Routes>
         </main>

@@ -1,3 +1,4 @@
+// this is a form for create or log in an account
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
@@ -8,6 +9,7 @@ import { auth } from "../firebase";
 import { setUser } from "../redux/features/authSlice";
 import { loginFormData } from "../data/staticData";
 import { useNavigate } from "react-router-dom";
+
 import Button from "./Button";
 import toast from "react-hot-toast";
 

@@ -1,8 +1,13 @@
+import imageSlider1 from "../assets/slider1.jpg";
+import imageSlider2 from "../assets/slider2.jpg";
+import imageSlider3 from "../assets/slider3.jpg";
+import imageSlider4 from "../assets/slider4.jpg";
+
 export const headerLinks = [
   {
     id: 1,
     title: "Home",
-    to: "/home",
+    to: "/",
   },
 
   {
@@ -37,4 +42,11 @@ export const loginFormData = [
     name: "password",
     type: "password",
   },
+];
+
+export const sliderImages = [
+  imageSlider1,
+  imageSlider2,
+  imageSlider3,
+  imageSlider4,
 ];
