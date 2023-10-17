@@ -8,11 +8,15 @@ import { useSelector } from "react-redux";
 import Container from "./Container";
 import logoImage from "../assets/logo.png";
 import avatarImage from "../assets/avatar.png";
+import noUserImage from "../assets/user.png";
+import ConfirmLogout from "./ConfirmLogout";
 
 function Header() {
+  const navigate = useNavigate();
+
   const user = useSelector((state) => state.auth.user);
   const [showLoginBtn, setShowLoginBtn] = useState(false);
-  const navigate = useNavigate();
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
 
   const handleClickAvatar = () => {
     if (user) {
@@ -51,7 +55,7 @@ function Header() {
             <div className="relative cursor-pointer">
               <MdShoppingBasket className="text-2xl" />
               <span
-                className="absolute right-[-8px] top-[-5px] flex h-[18px] w-[18px] 
+                className="absolute right-[-8px] top-[-5px] flex h-[18px] w-[18px]
               items-center justify-center rounded-full bg-yellow text-sm font-bold"
               >
                 3
@@ -65,12 +69,16 @@ function Header() {
             >
               <motion.img
                 whileTap={{ scale: 0.6 }}
-                src={avatarImage}
+                src={user ? avatarImage : noUserImage}
                 alt="User Avatar"
                 className="w-[30px] drop-shadow-xl"
               />
               {showLoginBtn && (
-                <div className="absolute right-0 top-[40px] flex w-[100px] items-center justify-between rounded-full bg-white p-[5px] text-center text-sm drop-shadow-xl">
+                <div
+                  className="absolute right-0 top-[40px] flex w-[100px] items-center justify-between rounded-full
+                 bg-white p-[5px] text-center text-sm drop-shadow-xl"
+                  onClick={() => setShowConfirmDelete(true)}
+                >
                   <p>Log out</p>
                   <MdLogout />
                 </div>
@@ -81,6 +89,10 @@ function Header() {
         {/* Mobile */}
         <div className="flex h-full w-full bg-slate-500 md:hidden">Header</div>
       </Container>
+
+      {showConfirmDelete && (
+        <ConfirmLogout setShowConfirmDelete={setShowConfirmDelete} />
+      )}
     </header>
   );
 }

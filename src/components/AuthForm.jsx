@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,8 +7,9 @@ import {
 import { auth } from "../firebase";
 import { setUser } from "../redux/features/authSlice";
 import { loginFormData } from "../data/staticData";
-import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
+import toast from "react-hot-toast";
 
 const initialState = {
   email: "",
@@ -20,7 +21,7 @@ function AuthForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [values, setValues] = useState(initialState);
   const { email, password, error } = values;
 
@@ -39,6 +40,8 @@ function AuthForm() {
       const serializedUser = { uid, email: userEmail };
       dispatch(setUser(serializedUser));
       setValues(initialState);
+      toast.success("Account successfully Created.");
+      navigate("/");
     } catch (error) {
       setValues({ ...values, error: error.message });
     }
@@ -49,9 +52,10 @@ function AuthForm() {
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       const { uid, email: userEmail } = user;
       const serializedUser = { uid, email: userEmail };
-      console.log(serializedUser);
       dispatch(setUser(serializedUser));
       setValues(initialState);
+      toast.success("Logged in successfully.");
+      navigate("/");
     } catch (error) {
       setValues({ ...values, error: error.message });
     }
@@ -68,7 +72,6 @@ function AuthForm() {
     } else {
       createAccount();
     }
-    navigate("/");
   };
 
   return (
