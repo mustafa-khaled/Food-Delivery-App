@@ -1,13 +1,12 @@
-import Container from "../components/Container";
-import HomeSlider from "../components/home/HomeSlider";
-import PopularDishes from "../components/home/PopularDishes";
+import { Container, HomeSlider, PopularDishes, Category } from "../components";
 
 function Home() {
   return (
-    <div className="pt-[20px]">
+    <div>
       <Container>
-        <div className="flex flex-col gap-[50px] ">
+        <div className="flex flex-col gap-[50px]">
           <HomeSlider />
+          <Category />
           <PopularDishes />
         </div>
       </Container>

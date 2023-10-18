@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function SectionHead({ title }) {
   return (
-    <div className="relative flex items-center justify-between py-[10px]">
+    <div className="relative mb-[30px] flex items-center justify-between py-[10px]">
       <h2 className="text-2xl">{title}</h2>
       <Link
         to={"/menu"}

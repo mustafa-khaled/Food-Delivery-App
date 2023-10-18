@@ -6,6 +6,7 @@ export default {
       colors: {
         white: "#fff",
         gray: "#eee",
+        darkGray: "#ccc",
         textColor: "#515151",
         cartNumBg: "#e80013",
         primary: "#f5f3f3",

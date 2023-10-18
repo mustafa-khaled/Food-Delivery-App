@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setUser } from "./redux/features/authSlice";
-import { Home } from "./pages";
+import { Home, Menu } from "./pages";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,12 +18,13 @@ function App() {
 
   return (
     <AnimatePresence>
-      <div className="flex h-screen w-screen  flex-col overflow-y-auto bg-gray text-textColor">
+      <div className="flex h-screen w-screen flex-col overflow-y-auto bg-gray text-textColor">
         <Header />
-        <main className="mt-[60px]">
+        <main className="mt-[60px] py-[20px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<AuthForm />} />
+            <Route path="/menu" element={<Menu />} />
           </Routes>
         </main>
       </div>

@@ -3,6 +3,13 @@ import imageSlider2 from "../assets/slider2.jpg";
 import imageSlider3 from "../assets/slider3.jpg";
 import imageSlider4 from "../assets/slider4.jpg";
 
+import categoryImage1 from "../assets/Baked.png";
+import categoryImage2 from "../assets/Burger.png";
+import categoryImage3 from "../assets/Chicken.png";
+import categoryImage4 from "../assets/Coffee.png";
+import categoryImage5 from "../assets/Fast.png";
+import categoryImage6 from "../assets/Fish.png";
+
 export const headerLinks = [
   {
     id: 1,
@@ -49,4 +56,36 @@ export const sliderImages = [
   imageSlider2,
   imageSlider3,
   imageSlider4,
+];
+
+export const categoryDta = [
+  {
+    id: 1,
+    img: categoryImage1,
+  },
+
+  {
+    id: 2,
+    img: categoryImage2,
+  },
+
+  {
+    id: 3,
+    img: categoryImage3,
+  },
+
+  {
+    id: 4,
+    img: categoryImage4,
+  },
+
+  {
+    id: 5,
+    img: categoryImage5,
+  },
+
+  {
+    id: 6,
+    img: categoryImage6,
+  },
 ];
