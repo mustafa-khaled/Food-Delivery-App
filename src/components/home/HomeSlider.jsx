@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
-
 import { sliderImages } from "../../data/staticData";
+import { Link } from "react-router-dom";
 
 function HomeSlider() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -12,6 +12,7 @@ function HomeSlider() {
       return index + 1;
     });
   };
+
   const showPrevImage = () => {
     setImageIndex((index) => {
       if (index === 0) return sliderImages.length - 1;
@@ -35,6 +36,15 @@ function HomeSlider() {
         ))}
       </div>
 
+      <Link to={"/menu"}>
+        <button
+          className="absolute bottom-[20%] left-[50%] translate-x-[-50%] bg-yellow px-[20px] py-[10px] 
+        font-bold text-white  hover:opacity-[0.8]"
+        >
+          Order Now
+        </button>
+      </Link>
+
       {/* Next and prev buttons */}
       <button
         onClick={showPrevImage}
@@ -43,7 +53,7 @@ function HomeSlider() {
         cursor-pointer rounded-xl p-[1rem] text-4xl transition duration-100
       ease-in-out hover:bg-[rgb(0,0,0,0.2)]"
       >
-        <MdKeyboardArrowLeft />
+        <MdKeyboardArrowLeft className="hover:text-white" />
       </button>
 
       <button
@@ -53,7 +63,7 @@ function HomeSlider() {
       rounded-xl p-[1rem] text-4xl transition duration-100
       ease-in-out hover:bg-[rgb(0,0,0,0.2)]"
       >
-        <MdKeyboardArrowRight />
+        <MdKeyboardArrowRight className="hover:text-white" />
       </button>
 
       {/* Navigate between slides buttons */}
