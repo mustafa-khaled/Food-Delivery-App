@@ -4,7 +4,7 @@ import { formatCurrency } from "../../utils/helpers";
 import styles from "./MenuItem.module.css";
 
 function MenuItem({ data }) {
-  const { img } = data;
+  const { image, title, category } = data;
   const starCount = 5;
 
   return (
@@ -12,7 +12,7 @@ function MenuItem({ data }) {
       className={`${styles["menu-item"]} cursor-pointer rounded-xl border border-darkGray p-[10px]`}
     >
       <div className="relative rounded-xl px-[20px] py-[30px]">
-        <img src={img} alt="" className="relative z-10 mx-auto w-[200px]" />
+        <img src={image} alt="" className="relative z-10 mx-auto w-[200px]" />
         <div className={`${styles["item-overlay"]}`}></div>
       </div>
 
@@ -24,7 +24,7 @@ function MenuItem({ data }) {
         </div>
         <div className="my-[10px] flex items-start justify-between">
           <div>
-            <h3 className="text-lg font-bold">Bacon Burger</h3>
+            <h3 className="text-lg font-bold">{title}</h3>
             <span className="font-bold text-yellow">
               {formatCurrency(16.0)}
             </span>

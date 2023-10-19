@@ -8,3 +8,5 @@ export { default as Loader } from "./loader/Loader";
 export { default as SectionHead } from "./SectionHead";
 export { default as MenuItem } from "./menuItem/MenuItem";
 export { default as GridContainer } from "./GridContainer";
+export { default as MenuList } from "./menu/MenuList";
+export { default as MenuFilter } from "./menu/MenuFilter";
