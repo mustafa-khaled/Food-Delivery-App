@@ -4,13 +4,13 @@ import SectionHead from "../SectionHead";
 function Category() {
   return (
     <div>
-      <SectionHead title={"Category"} />
+      <SectionHead title={"Category"} to={"/menu"} />
       <div className="flex items-center justify-between gap-[10px]">
         {categoryDta.map((img) => {
           return (
             <div
               key={img.id}
-              className="bg-darkGray w-[calc(100%/6)] rounded-xl p-[10px]"
+              className="w-[calc(100%/6)] rounded-xl bg-white p-[10px] sm:p-[20px]"
             >
               <img
                 src={img.img}

@@ -39,7 +39,7 @@ function HomeSlider() {
       <Link to={"/menu"}>
         <button
           className="absolute bottom-[20%] left-[50%] translate-x-[-50%] bg-yellow px-[20px] py-[10px] 
-        font-bold text-white  hover:opacity-[0.8]"
+        font-bold text-white hover:bg-opacity-[0.8]"
         >
           Order Now
         </button>

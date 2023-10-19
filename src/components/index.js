@@ -4,5 +4,7 @@ export { default as Container } from "./Container";
 export { default as HomeSlider } from "./home/HomeSlider";
 export { default as PopularDishes } from "./home/PopularDishes";
 export { default as Category } from "./home/Category";
-
 export { default as Loader } from "./loader/Loader";
+export { default as SectionHead } from "./SectionHead";
+export { default as MenuItem } from "./menuItem/MenuItem";
+export { default as GridContainer } from "./GridContainer";
