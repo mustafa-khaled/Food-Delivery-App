@@ -4,19 +4,19 @@ import { useSelector } from "react-redux";
 
 import Button from "../Button";
 import CartItem from "./CartItem";
+import { getCart, getTotalCartPrise } from "../../redux/features/cartSlice";
 
 function Cart({ showCart, setShowCart }) {
-  const cartItems = useSelector((state) => state.cart.cart);
-
-  console.log(cartItems);
+  const cartItems = useSelector(getCart);
+  const totalPrice = useSelector(getTotalCartPrise);
 
   return (
     <>
       <div
         className={`transition-right fixed  z-50  duration-300 ease-in-out ${
-          showCart ? "right-0" : "right-[-300px]"
+          showCart ? "right-0" : "right-[-400px]"
         } top-[60px]
-      h-[calc(100vh-60px)] w-[300px] border-l-[3px] border-t-[3px] border-gray bg-white`}
+      h-[calc(100vh-60px)] w-[300px] border-l-[3px] border-t-[3px] border-gray bg-white md:w-[400px]`}
       >
         <div className="flex h-[40px] items-center justify-between bg-gray px-[10px] font-bold">
           <p>Shopping Cart</p>
@@ -36,7 +36,7 @@ function Cart({ showCart, setShowCart }) {
           <div className="text-center">
             <div className="mb-[10px] flex items-center justify-between bg-gray p-[10px]">
               <h5 className="font-bold">Total:</h5>
-              <p>{formatCurrency(450)} </p>
+              <p>{formatCurrency(totalPrice || 0)} </p>
             </div>
             <div className="p-[10px]">
               <Button styles="w-full">Check Out</Button>

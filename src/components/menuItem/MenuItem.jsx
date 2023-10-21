@@ -1,16 +1,22 @@
 import { MdStarRate, MdShoppingBasket } from "react-icons/md";
 import { formatCurrency } from "../../utils/helpers";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../redux/features/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addItem,
+  getCurrentQuantityById,
+} from "../../redux/features/cartSlice";
 
 import Button from "../Button";
 import styles from "./MenuItem.module.css";
 
 function MenuItem({ item }) {
   const dispatch = useDispatch();
-  const { image, title, id } = item || {};
+  const { image, title, id, price } = item || {};
   const starCount = 5;
+
+  const currentQuantity = useSelector(getCurrentQuantityById(id));
+  const isInCart = currentQuantity > 0;
 
   return (
     <div
@@ -35,11 +41,16 @@ function MenuItem({ item }) {
         <div className="my-[10px] flex items-start justify-between">
           <div>
             <h3 className="text-lg font-bold">{title}</h3>
-            <span className="font-bold text-yellow">{formatCurrency(60)}</span>
+            <span className="font-bold text-yellow">
+              {formatCurrency(price)}
+            </span>
           </div>
-          <Button onClick={() => dispatch(addItem(item))}>
-            <MdShoppingBasket className="text-2xl" />
-          </Button>
+
+          {!isInCart && (
+            <Button onClick={() => dispatch(addItem(item))}>
+              <MdShoppingBasket className="text-2xl" />
+            </Button>
+          )}
         </div>
       </div>
     </div>

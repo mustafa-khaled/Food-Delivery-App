@@ -3,7 +3,7 @@ import { MdList } from "react-icons/md";
 
 import Container from "../Container";
 import ConfirmLogout from "../ConfirmLogout";
-import Cart from "./Cart";
+import Cart from "../cart/Cart";
 import Logo from "./Logo";
 import HeaderLinksDesktop from "./HeaderLinksDesktop";
 import Avatar from "./Avatar";
