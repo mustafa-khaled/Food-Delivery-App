@@ -15,6 +15,16 @@ function Header() {
   const [showCart, setShowCart] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
 
+  const toggleShowCart = () => {
+    setShowCart((prev) => !prev);
+    setShowLinks(false);
+  };
+
+  const toggleShowLinks = () => {
+    setShowLinks((prev) => !prev);
+    setShowCart(false);
+  };
+
   return (
     <header className="fixed z-50 flex h-[60px] w-screen items-center justify-center bg-white">
       <Container>
@@ -33,11 +43,11 @@ function Header() {
           </div>
 
           <div className="flex items-center gap-[20px] ">
-            <CartIcon setShowCart={setShowCart} />
+            <CartIcon toggleShowCart={toggleShowCart} />
             <Avatar setShowConfirmDelete={setShowConfirmDelete} />
             <MdList
               className="block cursor-pointer text-2xl md:hidden"
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={() => toggleShowLinks()}
             />
           </div>
         </div>

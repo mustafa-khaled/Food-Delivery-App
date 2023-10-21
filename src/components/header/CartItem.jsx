@@ -12,7 +12,7 @@ function CartItem() {
         <span className="text-xs">Price</span>
       </div>
 
-      <div className="flex items-center gap-[5px]">
+      <div className="flex items-center gap-[5px] text-sm font-bold">
         <button className="flex h-[20px] w-[20px] items-center justify-center rounded-full bg-darkGray">
           -
         </button>

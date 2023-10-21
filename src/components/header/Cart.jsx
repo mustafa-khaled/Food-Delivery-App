@@ -1,18 +1,13 @@
 import { MdClose } from "react-icons/md";
-import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { formatCurrency } from "../../utils/helpers";
 
 import Button from "../Button";
-
 import CartItem from "./CartItem";
 
 function Cart({ showCart, setShowCart }) {
-  const cartRef = useOutsideClick(() => setShowCart(false));
-
   return (
     <>
       <div
-        ref={cartRef}
         className={`transition-right fixed  z-50  duration-300 ease-in-out ${
           showCart ? "right-0" : "right-[-300px]"
         } top-[60px]
@@ -48,6 +43,7 @@ function Cart({ showCart, setShowCart }) {
         className={`fixed left-0 top-[60px] z-20 ${
           showCart ? "h-full" : "h-0"
         } w-full bg-[#00000080]`}
+        onClick={() => setShowCart(false)}
       ></div>
     </>
   );
