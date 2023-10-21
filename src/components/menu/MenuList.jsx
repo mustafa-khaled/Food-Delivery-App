@@ -6,24 +6,23 @@ import {
   MenuFilter,
   Loader,
 } from "../../components";
-import { productData } from "../../data/staticData";
-// import { getAllMenuItems } from "../../redux/features/menuItemsSlice";
-// import { useDispatch, useSelector } from "react-redux";
+import { getAllMenuItems } from "../../redux/features/menuItemsSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function MenuList() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [category, setCategory] = useState("all");
 
-  // const { data, loading, error } = useSelector((state) => state.menu);
+  const { data, loading, error } = useSelector((state) => state.menu);
 
-  const DataToShow =
-    category === "all"
-      ? productData
-      : productData.filter((i) => i.category === category);
+  const dataToShow =
+    category === "all" ? data : data.filter((el) => el.category === category);
 
-  // useEffect(() => {
-  //   dispatch(getAllMenuItems());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getAllMenuItems());
+  }, [dispatch, category]);
+
+  if (loading) return <Loader />;
 
   return (
     <div className="min-h-[calc(100vh-80px)]">
@@ -31,8 +30,8 @@ function MenuList() {
       <div className="flex flex-col-reverse items-start gap-[20px] md:flex-row md:gap-[10px]">
         <div className="w-full">
           <GridContainer>
-            {DataToShow.map((item) => {
-              return <MenuItem data={item} key={item.id} />;
+            {dataToShow?.map((item) => {
+              return <MenuItem data={item} key={item.image} />;
             })}
           </GridContainer>
         </div>

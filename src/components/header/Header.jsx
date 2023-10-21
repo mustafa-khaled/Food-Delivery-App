@@ -28,7 +28,8 @@ function Header() {
       {showConfirmDelete && (
         <ConfirmLogout setShowConfirmDelete={setShowConfirmDelete} />
       )}
-      {showCart && <Cart showCart={showCart} setShowCart={setShowCart} />}
+
+      <Cart showCart={showCart} setShowCart={setShowCart} />
     </header>
   );
 }

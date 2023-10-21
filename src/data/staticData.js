@@ -101,6 +101,7 @@ export const productData = [
     id: 1,
     title: "This Is Title",
     image: burger,
+    qty: 1,
     category: "burger",
   },
   {
@@ -108,6 +109,7 @@ export const productData = [
     title: "This Is Title",
     image: burger,
     category: "burger",
+    qty: 1,
   },
 
   {
@@ -115,6 +117,7 @@ export const productData = [
     title: "This Is Title",
     image: burger,
     category: "burger",
+    qty: 1,
   },
 
   {
@@ -122,6 +125,7 @@ export const productData = [
     title: "This Is Title",
     image: burger,
     category: "burger",
+    qty: 1,
   },
 
   {
@@ -129,6 +133,7 @@ export const productData = [
     title: "This Is Title",
     image: pizza,
     category: "pizza",
+    qty: 1,
   },
 
   {
@@ -136,6 +141,7 @@ export const productData = [
     title: "This Is Title",
     image: pizza,
     category: "pizza",
+    qty: 1,
   },
 
   {
@@ -242,35 +248,41 @@ export const categoryData = [
     id: 1,
     title: "All",
     category: "all",
+    qty: 1,
   },
 
   {
     id: 2,
     title: "Burger",
     category: "burger",
+    qty: 1,
   },
 
   {
     id: 3,
     title: "Pizza",
     category: "pizza",
+    qty: 1,
   },
 
   {
     id: 4,
     title: "Fish",
     category: "fish",
+    qty: 1,
   },
 
   {
     id: 5,
     title: "Ice Cream",
     category: "iceCream",
+    qty: 1,
   },
 
   {
     id: 6,
     title: "Drinks",
     category: "drink",
+    qty: 1,
   },
 ];

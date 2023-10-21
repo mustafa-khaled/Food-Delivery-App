@@ -9,7 +9,6 @@ const initialState = {
 };
 
 export const getAllMenuItems = createAsyncThunk("menuItems/fetch", async () => {
-  console.log("Fetching menu items...");
   try {
     const querySnapshot = await getDocs(collection(firestore, "menu items"));
     const items = querySnapshot.docs.map((doc) => doc.data());
@@ -30,8 +29,6 @@ const menuItemsSlice = createSlice({
         state.error = null;
       })
       .addCase(getAllMenuItems.fulfilled, (state, action) => {
-        console.log("Fulfilled payload:", action.payload);
-
         state.loading = false;
         state.data = action.payload;
       })
