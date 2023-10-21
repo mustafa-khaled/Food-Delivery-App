@@ -12,8 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 function MenuList() {
   const dispatch = useDispatch();
   const [category, setCategory] = useState("all");
-
-  const { data, loading, error } = useSelector((state) => state.menu);
+  const { data, loading } = useSelector((state) => state.menu);
 
   const dataToShow =
     category === "all" ? data : data.filter((el) => el.category === category);
@@ -31,7 +30,7 @@ function MenuList() {
         <div className="w-full">
           <GridContainer>
             {dataToShow?.map((item) => {
-              return <MenuItem data={item} key={item.image} />;
+              return <MenuItem item={item} key={item.id} />;
             })}
           </GridContainer>
         </div>

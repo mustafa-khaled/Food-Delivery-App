@@ -1,13 +1,15 @@
 import { MdStarRate, MdShoppingBasket } from "react-icons/md";
 import { formatCurrency } from "../../utils/helpers";
+import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../redux/features/cartSlice";
 
 import Button from "../Button";
-
 import styles from "./MenuItem.module.css";
-import { motion } from "framer-motion";
 
-function MenuItem({ data }) {
-  const { image, title } = data;
+function MenuItem({ item }) {
+  const dispatch = useDispatch();
+  const { image, title, id } = item || {};
   const starCount = 5;
 
   return (
@@ -35,7 +37,7 @@ function MenuItem({ data }) {
             <h3 className="text-lg font-bold">{title}</h3>
             <span className="font-bold text-yellow">{formatCurrency(60)}</span>
           </div>
-          <Button>
+          <Button onClick={() => dispatch(addItem(item))}>
             <MdShoppingBasket className="text-2xl" />
           </Button>
         </div>

@@ -2,7 +2,7 @@ import { MdShoppingBasket } from "react-icons/md";
 import { useSelector } from "react-redux";
 
 function CartIcon({ toggleShowCart }) {
-  const cartItemsNum = useSelector((state) => state.cart.length);
+  const cartItemsNum = useSelector((state) => state.cart.cart.length);
 
   return (
     <div className="relative cursor-pointer" onClick={() => toggleShowCart()}>

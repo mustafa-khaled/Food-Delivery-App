@@ -1,10 +1,15 @@
 import { MdClose } from "react-icons/md";
 import { formatCurrency } from "../../utils/helpers";
+import { useSelector } from "react-redux";
 
 import Button from "../Button";
 import CartItem from "./CartItem";
 
 function Cart({ showCart, setShowCart }) {
+  const cartItems = useSelector((state) => state.cart.cart);
+
+  console.log(cartItems);
+
   return (
     <>
       <div
@@ -23,7 +28,9 @@ function Cart({ showCart, setShowCart }) {
 
         <div className=" flex h-[calc(100%-40px)] flex-col justify-between ">
           <div className="mt-[10px] flex flex-col gap-[10px] overflow-y-auto">
-            <CartItem />
+            {cartItems?.map((item) => {
+              return <CartItem item={item} key={item.image} />;
+            })}
           </div>
 
           <div className="text-center">

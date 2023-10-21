@@ -1,14 +1,25 @@
-import { SectionHead, MenuItem, GridContainer } from "../../components";
-import { productData } from "../../data/staticData";
+import { useDispatch, useSelector } from "react-redux";
+import { SectionHead, MenuItem, GridContainer, Loader } from "../../components";
+import { useEffect } from "react";
+import { getAllMenuItems } from "../../redux/features/menuItemsSlice";
 
 function PopularDishes() {
+  const dispatch = useDispatch();
+  const { data, loading } = useSelector((state) => state.menu);
+
+  useEffect(() => {
+    dispatch(getAllMenuItems());
+  }, [dispatch]);
+
+  if (loading) return <Loader />;
+
   return (
     <div>
       <SectionHead title={"Popular Dishes"} to={"/menu"} />
 
       <GridContainer>
-        {productData?.slice(0, 5).map((item) => {
-          return <MenuItem data={item} key={item.id} />;
+        {data?.slice(0, 5).map((item) => {
+          return <MenuItem item={item} key={item.id} />;
         })}
       </GridContainer>
     </div>
