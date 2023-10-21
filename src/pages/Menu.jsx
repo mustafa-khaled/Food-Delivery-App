@@ -4,7 +4,8 @@ function Menu() {
   return (
     <div>
       <Container>
-        <MenuList />
+        {/* <MenuList /> */}
+        Menu
       </Container>
     </div>
   );

@@ -7,7 +7,7 @@ function Home() {
         <div className="flex flex-col gap-[50px]">
           <HomeSlider />
           <Category />
-          <PopularDishes />
+          {/* <PopularDishes /> */}
         </div>
       </Container>
     </div>
