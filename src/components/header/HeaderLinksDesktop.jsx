@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { headerLinks } from "../../data/staticData";
 import { NavLink } from "react-router-dom";
 
-function HeaderLinks({ styles }) {
+function HeaderLinksDesktop() {
   return (
     <motion.ul
       initial={{ opacity: 0, x: 200, y: 200 }}
       animate={{ opacity: 1, x: 0, y: 0 }}
       exit={{ opacity: 0, x: 200, y: 200 }}
-      className={styles}
+      className={"flex items-center justify-between gap-[50px]"}
     >
       {headerLinks.map((l) => {
         return (
@@ -21,4 +21,4 @@ function HeaderLinks({ styles }) {
   );
 }
 
-export default HeaderLinks;
+export default HeaderLinksDesktop;
