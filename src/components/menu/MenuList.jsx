@@ -26,7 +26,7 @@ function MenuList() {
   // }, [dispatch]);
 
   return (
-    <div>
+    <div className="min-h-[calc(100vh-80px)]">
       <SectionHead title={"Our Menu"} showLink={false} />
       <div className="flex flex-col-reverse items-start gap-[20px] md:flex-row md:gap-[10px]">
         <div className="w-full">

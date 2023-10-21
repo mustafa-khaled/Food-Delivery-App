@@ -10,3 +10,4 @@ export { default as MenuItem } from "./menuItem/MenuItem";
 export { default as GridContainer } from "./GridContainer";
 export { default as MenuList } from "./menu/MenuList";
 export { default as MenuFilter } from "./menu/MenuFilter";
+export { default as Footer } from "./Footer";

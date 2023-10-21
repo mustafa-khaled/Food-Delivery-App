@@ -1,7 +1,10 @@
 import { MdStarRate, MdShoppingBasket } from "react-icons/md";
 import { formatCurrency } from "../../utils/helpers";
 
+import Button from "../Button";
+
 import styles from "./MenuItem.module.css";
+import { motion } from "framer-motion";
 
 function MenuItem({ data }) {
   const { image, title } = data;
@@ -12,7 +15,12 @@ function MenuItem({ data }) {
       className={`${styles["menu-item"]} cursor-pointer rounded-xl border border-darkGray p-[10px]`}
     >
       <div className="relative flex h-[250px] items-center justify-center rounded-xl px-[20px] py-[30px]">
-        <img src={image} alt="" className="relative z-10 mx-auto w-[120px]" />
+        <motion.img
+          whileHover={{ scale: 1.2 }}
+          src={image}
+          alt=""
+          className="relative z-10 mx-auto w-[120px]"
+        />
         <div className={`${styles["item-overlay"]}`}></div>
       </div>
 
@@ -27,9 +35,9 @@ function MenuItem({ data }) {
             <h3 className="text-lg font-bold">{title}</h3>
             <span className="font-bold text-yellow">{formatCurrency(60)}</span>
           </div>
-          <div className="self-end rounded-xl bg-yellow p-[10px] hover:bg-opacity-[0.8]">
+          <Button>
             <MdShoppingBasket className="text-2xl" />
-          </div>
+          </Button>
         </div>
       </div>
     </div>

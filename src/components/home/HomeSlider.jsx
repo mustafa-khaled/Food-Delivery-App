@@ -3,6 +3,8 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { sliderImages } from "../../data/staticData";
 import { Link } from "react-router-dom";
 
+import Button from "../Button";
+
 function HomeSlider() {
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -36,13 +38,11 @@ function HomeSlider() {
         ))}
       </div>
 
-      <Link to={"/menu"}>
-        <button
-          className="absolute bottom-[20%] left-[50%] translate-x-[-50%] bg-yellow px-[20px] py-[10px] 
-        font-bold text-white hover:bg-opacity-[0.8]"
-        >
-          Order Now
-        </button>
+      <Link
+        to={"/menu"}
+        className="absolute bottom-[15%] left-[50%] translate-x-[-50%]"
+      >
+        <Button>Order Now</Button>
       </Link>
 
       {/* Next and prev buttons */}

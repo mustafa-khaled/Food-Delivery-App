@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 import HeaderLinks from "./HeaderLinks";
 import CartIcon from "./CartIcon";
 
-function DesktopView({ setShowConfirmDelete }) {
+function DesktopView({ setShowConfirmDelete, setShowCart }) {
   return (
     <div className="hidden h-full w-full items-center justify-between gap-8 md:flex">
       {/* Logo  */}
@@ -14,7 +14,7 @@ function DesktopView({ setShowConfirmDelete }) {
 
       {/* Cart Icon & User Image */}
       <div className="flex items-center gap-[20px]">
-        <CartIcon />
+        <CartIcon setShowCart={setShowCart} />
         {/* User Image  */}
         <Avatar setShowConfirmDelete={setShowConfirmDelete} />
       </div>

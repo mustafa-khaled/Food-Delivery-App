@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Header, AuthForm } from "./components";
+import { Header, AuthForm, Footer } from "./components";
 import { AnimatePresence } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -20,13 +20,14 @@ function App() {
     <AnimatePresence>
       <div className="flex h-screen w-screen flex-col overflow-y-auto bg-gray text-textColor">
         <Header />
-        <main className="mt-[60px] py-[20px]">
+        <main className="mt-[80px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<AuthForm />} />
             <Route path="/menu" element={<Menu />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </AnimatePresence>
   );
