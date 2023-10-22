@@ -14,6 +14,17 @@ import teamImage1 from "../assets/manager.jpg";
 import teamImage2 from "../assets/chef-1.jpg";
 import teamImage3 from "../assets/chef2.jpg";
 
+import blogImage1 from "../assets/blog1.jpg";
+import blogImage2 from "../assets/blog2.jpg";
+import blogImage3 from "../assets/blog3.jpg";
+import blogImage4 from "../assets/blog-4.jpg";
+import blogImage5 from "../assets/blog5.jpg";
+import blogImage6 from "../assets/blog6.jpg";
+import blogImage7 from "../assets/blog7.jpg";
+import blogImage8 from "../assets/blog8.jpg";
+import blogImage9 from "../assets/blog9.jpg";
+import blogImage10 from "../assets/blog10.jpg";
+
 // import burger from "../assets/product/dish_06.png";
 // import pizza from "../assets/product/our-story.png";
 // import drink from "../assets/product/d1.png";
@@ -295,4 +306,65 @@ export const ourTeamData = [
   { id: 1, image: teamImage1, name: "William Smith", title: "Manager" },
   { id: 2, image: teamImage2, name: "John Doe", title: "Chef" },
   { id: 3, image: teamImage3, name: "Bradd  L.", title: "Chef" },
+];
+
+export const blogData = [
+  {
+    id: 1,
+    title: "10 Reasons To Do A Digital Detox Challenge",
+    image: blogImage1,
+  },
+  {
+    id: 2,
+    title: "The Ultimate Hangover Burger: Egg in a Hole Burger Grilled Cheese",
+    image: blogImage2,
+  },
+
+  {
+    id: 3,
+    title: "Traditional Soft Pretzels with Sweet Beer Cheese",
+    image: blogImage3,
+  },
+
+  {
+    id: 4,
+    title: "My Favorite Easy Black Pizza Toast Recipe",
+    image: blogImage4,
+  },
+
+  {
+    id: 5,
+    title: "6 Ingredient Vegan Cinnamon Rolls",
+    image: blogImage5,
+  },
+
+  {
+    id: 6,
+    title: "Crispy Stovetop Roasted Red Potatoes",
+    image: blogImage6,
+  },
+
+  {
+    id: 7,
+    title: "Easy 4 Ingredient Hatch Salsa Verde",
+    image: blogImage7,
+  },
+
+  {
+    id: 8,
+    title: "Totoro Pancake Tutorial: Easy Totoro Pancake Food Art",
+    image: blogImage8,
+  },
+
+  {
+    id: 9,
+    title: "How to Make Jammy Soft Boiled Eggs at Home",
+    image: blogImage9,
+  },
+
+  {
+    id: 10,
+    title: "Traditional Soft Pretzels with Sweet Beer Cheese",
+    image: blogImage10,
+  },
 ];

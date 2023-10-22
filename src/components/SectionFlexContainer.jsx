@@ -14,9 +14,9 @@ function SectionFlexContainer({
       <div className="w-full md:w-[50%]">
         <img src={images} alt={title} />
       </div>
-      <div className="w-full text-lg font-bold md:w-[50%]">
+      <div className="w-full text-base font-bold md:w-[50%] md:text-lg">
         <p className="text-yellow">{description}</p>
-        <h1 className="text-4xl">{title}</h1>
+        <h1 className="text-4xl md:text-2xl">{title}</h1>
         <p className="my-[10px] text-lightGray">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vero
           dolores delectus tempora ad, dolorum deserunt, sequi saepe
