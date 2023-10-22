@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Header, AuthForm, Footer } from "./components";
+import { Header, AuthForm, Footer, ScrollToTop } from "./components";
 import { Home, Menu, About, Blog } from "./pages";
 
 function App() {
   return (
     <AnimatePresence>
-      <div className="flex h-screen w-screen flex-col overflow-y-auto bg-gray text-textColor">
+      <div className="flex flex-col bg-gray text-textColor">
+        <ScrollToTop />
         <Header />
         <main className="mt-[80px]">
           <Routes>

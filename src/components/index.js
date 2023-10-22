@@ -19,3 +19,4 @@ export { default as PizzaSection } from "./about/PizzaSection";
 export { default as OurTeam } from "./about/OurTeam";
 export { default as DeliverySection } from "./about/DeliverySection";
 export { default as BlogsList } from "./blog/BlogsList";
+export { default as ScrollToTop } from "./ScrollToTop";
