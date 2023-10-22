@@ -3,23 +3,21 @@ import {
   HomeSlider,
   PopularDishes,
   Category,
-  AboutOurFood,
+  OurBurger,
   ChooseWhatYouWant,
 } from "../components";
 
 function Home() {
   return (
-    <div>
-      <Container>
-        <div className="flex flex-col gap-[60px]">
-          <HomeSlider />
-          <Category />
-          <AboutOurFood />
-          <PopularDishes />
-          <ChooseWhatYouWant />
-        </div>
-      </Container>
-    </div>
+    <Container>
+      <div className="flex flex-col gap-[60px]">
+        <HomeSlider />
+        <Category />
+        <OurBurger />
+        <PopularDishes />
+        <ChooseWhatYouWant />
+      </div>
+    </Container>
   );
 }
 

@@ -7,9 +7,9 @@ function PopularDishes() {
   const dispatch = useDispatch();
   const { data, loading } = useSelector((state) => state.menu);
 
-  useEffect(() => {
-    dispatch(getAllMenuItems());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getAllMenuItems());
+  // }, [dispatch]);
 
   if (loading) return <Loader />;
 

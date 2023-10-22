@@ -10,6 +10,10 @@ import categoryImage4 from "../assets/Coffee.png";
 import categoryImage5 from "../assets/Fast.png";
 import categoryImage6 from "../assets/Fish.png";
 
+import teamImage1 from "../assets/manager.jpg";
+import teamImage2 from "../assets/chef-1.jpg";
+import teamImage3 from "../assets/chef2.jpg";
+
 // import burger from "../assets/product/dish_06.png";
 // import pizza from "../assets/product/our-story.png";
 // import drink from "../assets/product/d1.png";
@@ -285,4 +289,10 @@ export const categoryData = [
     category: "drink",
     qty: 1,
   },
+];
+
+export const ourTeamData = [
+  { id: 1, image: teamImage1, name: "William Smith", title: "Manager" },
+  { id: 2, image: teamImage2, name: "John Doe", title: "Chef" },
+  { id: 3, image: teamImage3, name: "Bradd  L.", title: "Chef" },
 ];

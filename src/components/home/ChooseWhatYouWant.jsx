@@ -9,7 +9,7 @@ function ChooseWhatYouWant() {
         <h2 className="text-3xl">
           Choose what you want, select a pick up time
         </h2>
-        <p className="text-lightGray my-[10px]">
+        <p className="my-[10px] text-lightGray">
           As well known and we are very busy all days advice you. advice you to
           call us of before arriving, so we can guarantee your seat.
         </p>
@@ -24,7 +24,7 @@ function ChooseWhatYouWant() {
         <h2 className="text-3xl">
           Choose what you want, select a pick up time
         </h2>
-        <p className="text-lightGray my-[10px]">
+        <p className="my-[10px] text-lightGray">
           As well known and we are very busy all days advice you. advice you to
           call us of before arriving, so we can guarantee your seat.
         </p>
