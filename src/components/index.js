@@ -17,3 +17,5 @@ export { default as HeroSection } from "./about/HeroSection";
 export { default as ChickenSection } from "./about/ChickenSection";
 export { default as PizzaSection } from "./about/PizzaSection";
 export { default as OurTeam } from "./about/OurTeam";
+export { default as DeliverySection } from "./about/DeliverySection";
+export { default as BlogsList } from "./blog/BlogsList";

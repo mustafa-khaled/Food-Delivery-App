@@ -41,8 +41,8 @@ export const headerLinks = [
 
   {
     id: 4,
-    title: "Services",
-    to: "/services",
+    title: "Blog",
+    to: "/blog",
   },
 ];
 

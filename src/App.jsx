@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Header, AuthForm, Footer } from "./components";
-import { Home, Menu, About } from "./pages";
+import { Home, Menu, About, Blog } from "./pages";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
             <Route path="/login" element={<AuthForm />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         </main>
         <Footer />

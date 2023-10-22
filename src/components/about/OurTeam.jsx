@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ourTeamData } from "../../data/staticData";
 import SectionHead from "../SectionHead";
 
@@ -6,10 +5,7 @@ function OurTeam() {
   return (
     <div>
       <SectionHead title={"Our Talented Chefs"} showLink={false} />
-      <div
-        className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))]
-  gap-[20px] md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]"
-      >
+      <div className="flex flex-col items-center justify-between gap-[20px] sm:flex-row">
         {ourTeamData.map((item) => {
           return (
             <div key={item.id} className="mx-auto text-center">
