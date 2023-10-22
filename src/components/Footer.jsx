@@ -8,38 +8,46 @@ function Footer() {
   return (
     <div className="mt-[50px] bg-textColor text-center text-white">
       <Container>
-        <div className="py-[30px] text-sm">
+        <div className="py-[40px] text-sm">
           <GridContainer>
             <div>
               <h5 className="mb-[5px] text-xl uppercase">Address</h5>
-              <p>Cairo, Egypt</p>
+              <p className="text-lightGray">Cairo, Egypt</p>
             </div>
 
             <div>
               <h5 className="mb-[5px] text-xl uppercase">Book A Table</h5>
-              <p>
+              <p className="text-lightGray">
                 Dogfood och Sliders foodtruck.
                 <br /> Under Om oss kan ni läsa
               </p>
-              <span className="text-yellow">(850) 435-4155</span>
+              <span className="text-yellow">(+20) 1151747091</span>
             </div>
 
             <div>
               <h5 className="mb-[5px] text-xl uppercase">Opening Hour</h5>
-              <p>Monday – Friday: 8am – 4pm</p>
-              <p>Saturday: 9am – 5pm</p>
-              <div className="flex items-center justify-center gap-[10px]"></div>
+              <p className="text-lightGray">Monday – Friday: 8am – 4pm</p>
+              <p className="text-lightGray">Saturday: 9am – 5pm</p>
             </div>
 
             <div>
               <h5 className="mb-[5px] text-xl uppercase">News Letter</h5>
-              <p>
+              <p className="text-lightGray ">
                 Subscribe to the weekly newsletter for all the latest updates
               </p>
-              <input type="text" placeholder="Your Email" />
+              <div className="border-lightGray mt-[10px] flex items-center border">
+                <input
+                  type="text"
+                  placeholder="Your Email"
+                  className="w-full bg-transparent p-[10px] outline-none"
+                />
+                <button className="hover:bg-darkYellow bg-yellow p-[10px] text-textColor">
+                  Subscribe
+                </button>
+              </div>
             </div>
 
-            <div className="flex flex-col items-center gap-[10px] text-xl">
+            <div className="flex flex-row items-center justify-center gap-[10px] text-xl md:flex-col md:justify-start">
               <Link
                 to={"https://github.com/mustafa-khaled"}
                 target="_blank"
@@ -58,11 +66,12 @@ function Footer() {
           </GridContainer>
         </div>
       </Container>
-      <p className="bg-yellow py-[20px] text-textColor">
+      <p className="bg-yellow p-[20px] text-textColor ">
         Copyright © 2023{" "}
         <Link
           to={"https://www.linkedin.com/in/the-mustafa-khaled/"}
           target="_blank"
+          className="underline"
         >
           Mustafa Khaled
         </Link>

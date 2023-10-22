@@ -18,7 +18,7 @@ function PopularDishes() {
       <SectionHead title={"Popular Dishes"} to={"/menu"} />
 
       <GridContainer>
-        {data?.slice(0, 5).map((item) => {
+        {data?.slice(0, 5)?.map((item) => {
           return <MenuItem item={item} key={item.id} />;
         })}
       </GridContainer>

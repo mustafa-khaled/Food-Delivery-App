@@ -11,3 +11,5 @@ export { default as GridContainer } from "./GridContainer";
 export { default as MenuList } from "./menu/MenuList";
 export { default as MenuFilter } from "./menu/MenuFilter";
 export { default as Footer } from "./Footer";
+export { default as AboutOurFood } from "./home/AboutOurFood";
+export { default as ChooseWhatYouWant } from "./home/ChooseWhatYouWant";

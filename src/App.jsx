@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setUser } from "./redux/features/authSlice";
-import { Home, Menu } from "./pages";
+import { Home, Menu, About } from "./pages";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<AuthForm />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
         <Footer />

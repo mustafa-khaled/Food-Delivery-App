@@ -10,11 +10,11 @@ import categoryImage4 from "../assets/Coffee.png";
 import categoryImage5 from "../assets/Fast.png";
 import categoryImage6 from "../assets/Fish.png";
 
-import burger from "../assets/product/dish_06.png";
-import pizza from "../assets/product/our-story.png";
-import drink from "../assets/product/d1.png";
-import iceCream from "../assets/product/i1.png";
-import fish from "../assets/product/fi2.png";
+// import burger from "../assets/product/dish_06.png";
+// import pizza from "../assets/product/our-story.png";
+// import drink from "../assets/product/d1.png";
+// import iceCream from "../assets/product/i1.png";
+// import fish from "../assets/product/fi2.png";
 
 export const headerLinks = [
   {
@@ -96,152 +96,152 @@ export const categoryDta = [
   },
 ];
 
-export const productData = [
-  {
-    id: 1,
-    title: "This Is Title",
-    image: burger,
-    qty: 1,
-    category: "burger",
-  },
-  {
-    id: 2,
-    title: "This Is Title",
-    image: burger,
-    category: "burger",
-    qty: 1,
-  },
+// export const productData = [
+//   {
+//     id: 1,
+//     title: "This Is Title",
+//     image: burger,
+//     qty: 1,
+//     category: "burger",
+//   },
+//   {
+//     id: 2,
+//     title: "This Is Title",
+//     image: burger,
+//     category: "burger",
+//     qty: 1,
+//   },
 
-  {
-    id: 3,
-    title: "This Is Title",
-    image: burger,
-    category: "burger",
-    qty: 1,
-  },
+//   {
+//     id: 3,
+//     title: "This Is Title",
+//     image: burger,
+//     category: "burger",
+//     qty: 1,
+//   },
 
-  {
-    id: 4,
-    title: "This Is Title",
-    image: burger,
-    category: "burger",
-    qty: 1,
-  },
+//   {
+//     id: 4,
+//     title: "This Is Title",
+//     image: burger,
+//     category: "burger",
+//     qty: 1,
+//   },
 
-  {
-    id: 5,
-    title: "This Is Title",
-    image: pizza,
-    category: "pizza",
-    qty: 1,
-  },
+//   {
+//     id: 5,
+//     title: "This Is Title",
+//     image: pizza,
+//     category: "pizza",
+//     qty: 1,
+//   },
 
-  {
-    id: 6,
-    title: "This Is Title",
-    image: pizza,
-    category: "pizza",
-    qty: 1,
-  },
+//   {
+//     id: 6,
+//     title: "This Is Title",
+//     image: pizza,
+//     category: "pizza",
+//     qty: 1,
+//   },
 
-  {
-    id: 7,
-    title: "This Is Title",
-    image: pizza,
-    category: "pizza",
-  },
+//   {
+//     id: 7,
+//     title: "This Is Title",
+//     image: pizza,
+//     category: "pizza",
+//   },
 
-  {
-    id: 8,
-    title: "This Is Title",
-    image: pizza,
-    category: "pizza",
-  },
+//   {
+//     id: 8,
+//     title: "This Is Title",
+//     image: pizza,
+//     category: "pizza",
+//   },
 
-  {
-    id: 9,
-    title: "This Is Title",
-    image: drink,
-    category: "drink",
-  },
+//   {
+//     id: 9,
+//     title: "This Is Title",
+//     image: drink,
+//     category: "drink",
+//   },
 
-  {
-    id: 10,
-    title: "This Is Title",
-    image: drink,
-    category: "drink",
-  },
+//   {
+//     id: 10,
+//     title: "This Is Title",
+//     image: drink,
+//     category: "drink",
+//   },
 
-  {
-    id: 11,
-    title: "This Is Title",
-    image: drink,
-    category: "drink",
-  },
+//   {
+//     id: 11,
+//     title: "This Is Title",
+//     image: drink,
+//     category: "drink",
+//   },
 
-  {
-    id: 12,
-    title: "This Is Title",
-    image: drink,
-    category: "drink",
-  },
+//   {
+//     id: 12,
+//     title: "This Is Title",
+//     image: drink,
+//     category: "drink",
+//   },
 
-  {
-    id: 13,
-    title: "This Is Title",
-    image: iceCream,
-    category: "iceCream",
-  },
+//   {
+//     id: 13,
+//     title: "This Is Title",
+//     image: iceCream,
+//     category: "iceCream",
+//   },
 
-  {
-    id: 14,
-    title: "This Is Title",
-    image: iceCream,
-    category: "iceCream",
-  },
+//   {
+//     id: 14,
+//     title: "This Is Title",
+//     image: iceCream,
+//     category: "iceCream",
+//   },
 
-  {
-    id: 15,
-    title: "This Is Title",
-    image: iceCream,
-    category: "iceCream",
-  },
+//   {
+//     id: 15,
+//     title: "This Is Title",
+//     image: iceCream,
+//     category: "iceCream",
+//   },
 
-  {
-    id: 16,
-    title: "This Is Title",
-    image: iceCream,
-    category: "iceCream",
-  },
+//   {
+//     id: 16,
+//     title: "This Is Title",
+//     image: iceCream,
+//     category: "iceCream",
+//   },
 
-  {
-    id: 17,
-    title: "This Is Title",
-    image: fish,
-    category: "fish",
-  },
+//   {
+//     id: 17,
+//     title: "This Is Title",
+//     image: fish,
+//     category: "fish",
+//   },
 
-  {
-    id: 18,
-    title: "This Is Title",
-    image: fish,
-    category: "fish",
-  },
+//   {
+//     id: 18,
+//     title: "This Is Title",
+//     image: fish,
+//     category: "fish",
+//   },
 
-  {
-    id: 19,
-    title: "This Is Title",
-    image: fish,
-    category: "fish",
-  },
+//   {
+//     id: 19,
+//     title: "This Is Title",
+//     image: fish,
+//     category: "fish",
+//   },
 
-  {
-    id: 20,
-    title: "This Is Title",
-    image: fish,
-    category: "fish",
-  },
-];
+//   {
+//     id: 20,
+//     title: "This Is Title",
+//     image: fish,
+//     category: "fish",
+//   },
+// ];
 
 export const categoryData = [
   {

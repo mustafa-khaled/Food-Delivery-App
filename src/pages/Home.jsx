@@ -1,13 +1,22 @@
-import { Container, HomeSlider, PopularDishes, Category } from "../components";
+import {
+  Container,
+  HomeSlider,
+  PopularDishes,
+  Category,
+  AboutOurFood,
+  ChooseWhatYouWant,
+} from "../components";
 
 function Home() {
   return (
     <div>
       <Container>
-        <div className="flex flex-col gap-[50px]">
+        <div className="flex flex-col gap-[60px]">
           <HomeSlider />
           <Category />
-          {/* <PopularDishes /> */}
+          <AboutOurFood />
+          <PopularDishes />
+          <ChooseWhatYouWant />
         </div>
       </Container>
     </div>
