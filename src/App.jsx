@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Header, AuthForm, Footer, ScrollToTop } from "./components";
-import { Home, Menu, About, Blog, NotFound } from "./pages";
+import { Home, Menu, About, Blog, NotFound, Orders } from "./pages";
 
 function App() {
   return (
@@ -16,6 +16,8 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/orders" element={<Orders />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -8,6 +8,7 @@ import {
 } from "../../components";
 import { getAllMenuItems } from "../../redux/features/menuItemsSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Empty from "../Empty";
 
 function MenuList() {
   const dispatch = useDispatch();
@@ -22,6 +23,8 @@ function MenuList() {
   }, [dispatch, category]);
 
   if (loading) return <Loader />;
+
+  if (data?.length <= 0) return <Empty />;
 
   return (
     <div className="min-h-[calc(100vh-80px)]">

@@ -1,12 +1,21 @@
 import { MdClose } from "react-icons/md";
 import { formatCurrency } from "../../utils/helpers";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  clearCart,
+  getCart,
+  getTotalCartPrise,
+} from "../../redux/features/cartSlice";
 
 import Button from "../Button";
 import CartItem from "./CartItem";
-import { getCart, getTotalCartPrise } from "../../redux/features/cartSlice";
+import EmptyCart from "./EmptyCart";
+import { useNavigate } from "react-router-dom";
 
 function Cart({ showCart, setShowCart }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const cartItems = useSelector(getCart);
   const totalPrice = useSelector(getTotalCartPrise);
 
@@ -28,9 +37,13 @@ function Cart({ showCart, setShowCart }) {
 
         <div className=" flex h-[calc(100%-40px)] flex-col justify-between ">
           <div className="mt-[10px] flex flex-col gap-[10px] overflow-y-auto">
-            {cartItems?.map((item) => {
-              return <CartItem item={item} key={item.image} />;
-            })}
+            {cartItems?.length > 0 ? (
+              cartItems?.map((item) => {
+                return <CartItem item={item} key={item.image} />;
+              })
+            ) : (
+              <EmptyCart />
+            )}
           </div>
 
           <div className="text-center">
@@ -38,9 +51,21 @@ function Cart({ showCart, setShowCart }) {
               <h5 className="font-bold">Total:</h5>
               <p>{formatCurrency(totalPrice || 0)} </p>
             </div>
-            <div className="p-[10px]">
-              <Button styles="w-full">Check Out</Button>
-            </div>
+
+            {cartItems?.length > 0 && (
+              <div className="flex items-center gap-[10px] p-[10px]">
+                <Button styles="w-full" onClick={() => navigate("/orders")}>
+                  Order Now
+                </Button>
+                <Button
+                  styles="w-full"
+                  variation="secondary"
+                  onClick={() => dispatch(clearCart())}
+                >
+                  Clear Cart
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
