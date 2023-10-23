@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <div className="flex min-h-[calc(100vh-80px)] items-center justify-center">
       <div className="flex flex-col items-center justify-between gap-[20px] md:flex-row">
-        <div className="w-full text-lg  font-bold md:w-[50%]">
+        <div className="w-full text-center  text-lg font-bold md:w-[50%] md:text-left">
           <p className="text-yellow">Wellome!</p>
           <h1 className="text-4xl">
             Best burger ideas & traditions from the whole world
