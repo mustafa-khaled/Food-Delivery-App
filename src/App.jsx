@@ -9,7 +9,7 @@ function App() {
       <div className="flex flex-col bg-gray text-textColor">
         <ScrollToTop />
         <Header />
-        <main className="mt-[80px]">
+        <main className="mt-[60px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<AuthForm />} />
@@ -17,7 +17,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/orders" element={<Orders />} />
-
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -2,9 +2,11 @@ import { Container, BlogsList } from "../components";
 
 function Blog() {
   return (
-    <Container>
-      <BlogsList />
-    </Container>
+    <div className="mt-[20px]">
+      <Container>
+        <BlogsList />
+      </Container>
+    </div>
   );
 }
 

@@ -10,16 +10,18 @@ import {
 
 function Home() {
   return (
-    <Container>
-      <div className="flex flex-col gap-[60px]">
-        <HomeSlider />
-        <Category />
-        <OurBurger />
-        <PopularDishes />
-        <ChooseWhatYouWant />
-        <ClientRatings />
-      </div>
-    </Container>
+    <>
+      <HomeSlider />
+      <Container>
+        <div className="mt-[60px] flex flex-col gap-[60px]">
+          <Category />
+          <OurBurger />
+          <PopularDishes />
+          <ChooseWhatYouWant />
+          <ClientRatings />
+        </div>
+      </Container>
+    </>
   );
 }
 

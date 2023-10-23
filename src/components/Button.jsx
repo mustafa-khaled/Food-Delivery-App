@@ -2,9 +2,9 @@ function Button({ children, variation = "regular", onClick, styles }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-lg ${
+      className={` rounded-md  ${
         variation === "secondary" ? "bg-gray" : "bg-yellow"
-      } hover:bg-darkYellow px-[15px] py-[8px] font-bold  hover:text-white ${styles}`}
+      } px-[10px] py-[5px] text-sm font-bold hover:bg-darkYellow  hover:text-white ${styles}`}
     >
       {children}
     </button>

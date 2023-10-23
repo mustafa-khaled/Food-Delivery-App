@@ -29,21 +29,14 @@ function HomeSlider() {
             key={url}
             src={url}
             alt="imag"
-            className={`block h-full w-full flex-shrink-0 flex-grow-0 rounded-xl object-cover`}
+            className={`block h-full w-full flex-shrink-0 flex-grow-0 object-cover`}
             style={{
               translate: `${-100 * imageIndex}%`,
-              transition: "translate 300ms ease-in-out",
+              transition: "translate 400ms ease-in-out",
             }}
           />
         ))}
       </div>
-
-      <Link
-        to={"/menu"}
-        className="absolute bottom-[15%] left-[50%] translate-x-[-50%]"
-      >
-        <Button>Order Now</Button>
-      </Link>
 
       {/* Next and prev buttons */}
       <button

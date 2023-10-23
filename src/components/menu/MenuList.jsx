@@ -24,7 +24,7 @@ function MenuList() {
 
   if (loading) return <Loader />;
 
-  if (data?.length <= 0) return <Empty />;
+  if (data?.length <= 0) return <Empty message={"No menu Data Available"} />;
 
   return (
     <div className="min-h-[calc(100vh-80px)]">

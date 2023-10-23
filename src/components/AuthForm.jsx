@@ -10,6 +10,8 @@ import { setUser } from "../redux/features/authSlice";
 import { loginFormData } from "../data/staticData";
 import { useNavigate } from "react-router-dom";
 
+import Container from "./Container";
+
 import Button from "./Button";
 import toast from "react-hot-toast";
 
@@ -77,45 +79,47 @@ function AuthForm() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-60px)] items-center justify-center">
-      <form className="flex flex-col items-center justify-center gap-[10px] rounded-xl bg-white p-[20px]">
-        <h3 className="mb-[10px] text-xl font-bold">
-          {isLogin ? "Log in" : "Create an account"}
-        </h3>
-        {loginFormData.map((el) => {
-          return (
-            <div
-              key={el.id}
-              className="mb-[10px] flex flex-col items-start gap-[5px]"
-            >
-              <label className="font-bold" htmlFor={el.name}>
-                {el.title}:
-              </label>
-              <input
-                className="input"
-                id={el.name}
-                type={el?.type}
-                placeholder={el?.title}
-                name={el?.name}
-                value={values[el?.name]}
-                onChange={handleChange}
-              />
-            </div>
-          );
-        })}
+    <Container>
+      <div className="flex h-[calc(100vh-60px)] items-center justify-center">
+        <form className="flex w-full flex-col items-center justify-center gap-[10px] rounded-xl bg-white p-[20px] md:w-[400px]">
+          <h3 className="mb-[10px] text-xl font-bold">
+            {isLogin ? "Log in" : "Create an account"}
+          </h3>
+          {loginFormData.map((el) => {
+            return (
+              <div
+                key={el.id}
+                className="mb-[10px] flex w-full flex-col items-start gap-[5px]"
+              >
+                <label className="font-bold" htmlFor={el.name}>
+                  {el.title}:
+                </label>
+                <input
+                  className="input"
+                  id={el.name}
+                  type={el?.type}
+                  placeholder={el?.title}
+                  name={el?.name}
+                  value={values[el?.name]}
+                  onChange={handleChange}
+                />
+              </div>
+            );
+          })}
 
-        <Button onClick={handleAuthClick}>
-          {isLogin ? "Log in" : "Create an account"}
-        </Button>
-        {error && <p className="text-sm font-bold text-red-400">{error}</p>}
-        <p
-          className="mt-[10px] cursor-pointer text-sm font-bold text-yellow"
-          onClick={() => setIsLogin((p) => !p)}
-        >
-          {isLogin ? "Create new account!" : "Already have an account!"}
-        </p>
-      </form>
-    </div>
+          <Button onClick={handleAuthClick}>
+            {isLogin ? "Log in" : "Create an account"}
+          </Button>
+          {error && <p className="text-sm font-bold text-red-400">{error}</p>}
+          <p
+            className="mt-[10px] cursor-pointer text-sm font-bold text-yellow"
+            onClick={() => setIsLogin((p) => !p)}
+          >
+            {isLogin ? "Create new account!" : "Already have an account!"}
+          </p>
+        </form>
+      </div>
+    </Container>
   );
 }
 

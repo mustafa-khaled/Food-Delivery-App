@@ -10,7 +10,7 @@ import {
 
 function About() {
   return (
-    <div>
+    <div className="mt-[20px]">
       <Container>
         <div className="flex flex-col gap-[60px]">
           <HeroSection />

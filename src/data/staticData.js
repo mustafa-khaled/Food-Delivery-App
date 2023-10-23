@@ -1,3 +1,6 @@
+import { CiCoffeeCup, CiIceCream, CiPizza, CiGrid41 } from "react-icons/ci";
+import { FaFish, FaHamburger } from "react-icons/fa";
+
 import imageSlider1 from "../assets/slider1.jpg";
 import imageSlider2 from "../assets/slider2.jpg";
 import imageSlider3 from "../assets/slider3.jpg";
@@ -269,6 +272,7 @@ export const categoryData = [
     title: "All",
     category: "all",
     qty: 1,
+    icon: CiGrid41,
   },
 
   {
@@ -276,6 +280,7 @@ export const categoryData = [
     title: "Burger",
     category: "burger",
     qty: 1,
+    icon: FaHamburger,
   },
 
   {
@@ -283,6 +288,7 @@ export const categoryData = [
     title: "Pizza",
     category: "pizza",
     qty: 1,
+    icon: CiPizza,
   },
 
   {
@@ -290,6 +296,7 @@ export const categoryData = [
     title: "Fish",
     category: "fish",
     qty: 1,
+    icon: FaFish,
   },
 
   {
@@ -297,6 +304,7 @@ export const categoryData = [
     title: "Ice Cream",
     category: "iceCream",
     qty: 1,
+    icon: CiIceCream,
   },
 
   {
@@ -304,6 +312,7 @@ export const categoryData = [
     title: "Drinks",
     category: "drink",
     qty: 1,
+    icon: CiCoffeeCup,
   },
 ];
 

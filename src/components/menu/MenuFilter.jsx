@@ -7,14 +7,16 @@ function MenuFilter({ category, setCategory }) {
 
       <ul className="rounded-xl border border-darkGray bg-white p-[10px]">
         {categoryData.map((c) => {
+          const Icon = c.icon;
           return (
             <li
               key={c.id}
-              className={`mb-[5px] cursor-pointer rounded-xl border-b border-darkGray ${
+              className={`mb-[5px] flex cursor-pointer items-center gap-[10px] rounded-xl border-b border-darkGray ${
                 category === c.category && "bg-yellow"
               } px-[10px] py-[8px]`}
               onClick={() => setCategory(c.category)}
             >
+              <Icon className="text-xl font-bold" />
               {c.title}
             </li>
           );

@@ -1,7 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { SectionHead, MenuItem, GridContainer, Loader } from "../../components";
 import { useEffect } from "react";
 import { getAllMenuItems } from "../../redux/features/menuItemsSlice";
+import Empty from "../Empty";
+import SectionHead from "../SectionHead";
+import GridContainer from "../GridContainer";
+import MenuItem from "../menuItem/MenuItem";
+import Loader from "../loader/Loader";
 
 function PopularDishes() {
   const dispatch = useDispatch();
@@ -12,6 +16,9 @@ function PopularDishes() {
   }, [dispatch]);
 
   if (loading) return <Loader />;
+
+  if (data?.length <= 0)
+    return <Empty message={"No Popular Dishes Available"} />;
 
   return (
     <div>
