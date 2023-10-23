@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteItem, getTotalCartPrise } from "../../redux/features/cartSlice";
 import { formatCurrency } from "../../utils/helpers";
+import { fetchAddress } from "../../redux/features/authSlice";
 
 import NoUser from "./NoUser";
 import Button from "../Button";
@@ -19,16 +20,16 @@ function OrdersList() {
   const user = useSelector((state) => state.auth.user);
   const cart = useSelector((state) => state.cart.cart);
   const [values, setValues] = useState(initialState);
+  const { name, phone, address } = values;
 
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const { name, phone, address } = values;
-
   const totalPrice = useSelector(getTotalCartPrise);
 
   if (!user) return <NoUser />;
+
   return (
     <div className="min-h-[calc(100vh-80px)] ">
       <SectionHead title={"Order Now"} showLink={false} />
@@ -62,7 +63,14 @@ function OrdersList() {
                 value={address}
                 onChange={handleChange}
               />
-              <button className="h-full w-[150px] rounded-xl bg-yellow py-[3px] text-sm hover:bg-darkYellow hover:text-white">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  dispatch(fetchAddress());
+                }}
+                className="h-full w-[150px] rounded-xl bg-yellow py-[3px] text-sm hover:bg-darkYellow hover:text-white"
+              >
                 Get Position
               </button>
             </div>
