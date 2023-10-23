@@ -5,6 +5,7 @@ import {
   Category,
   OurBurger,
   ChooseWhatYouWant,
+  ClientRatings,
 } from "../components";
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
         <OurBurger />
         <PopularDishes />
         <ChooseWhatYouWant />
+        <ClientRatings />
       </div>
     </Container>
   );

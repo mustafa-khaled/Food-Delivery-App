@@ -9,6 +9,7 @@ import {
 
 import Button from "../Button";
 import styles from "./MenuItem.module.css";
+import toast from "react-hot-toast";
 
 function MenuItem({ item }) {
   const dispatch = useDispatch();
@@ -47,7 +48,12 @@ function MenuItem({ item }) {
           </div>
 
           {!isInCart && (
-            <Button onClick={() => dispatch(addItem(item))}>
+            <Button
+              onClick={() => {
+                dispatch(addItem(item));
+                toast.success(`'${title}' added to cart successfully.`);
+              }}
+            >
               <MdShoppingBasket className="text-2xl" />
             </Button>
           )}

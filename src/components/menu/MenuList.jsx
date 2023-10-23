@@ -17,9 +17,9 @@ function MenuList() {
   const dataToShow =
     category === "all" ? data : data.filter((el) => el.category === category);
 
-  // useEffect(() => {
-  //   dispatch(getAllMenuItems());
-  // }, [dispatch, category]);
+  useEffect(() => {
+    dispatch(getAllMenuItems());
+  }, [dispatch, category]);
 
   if (loading) return <Loader />;
 

@@ -29,7 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             fontSize: "16px",
             maxWidth: "500px",
             padding: "16px 24px",
-            backgroundColor: "#eee",
+            backgroundColor: "#f4f0f0",
             color: "#515151",
           },
         }}

@@ -25,6 +25,11 @@ import blogImage8 from "../assets/blog8.jpg";
 import blogImage9 from "../assets/blog9.jpg";
 import blogImage10 from "../assets/blog10.jpg";
 
+import clientImage1 from "../assets/person1.jpg";
+import clientImage2 from "../assets/person2.jpg";
+import clientImage3 from "../assets/person3.jpg";
+import clientImage4 from "../assets/person4.jpg";
+
 // import burger from "../assets/product/dish_06.png";
 // import pizza from "../assets/product/our-story.png";
 // import drink from "../assets/product/d1.png";
@@ -366,5 +371,39 @@ export const blogData = [
     id: 10,
     title: "Traditional Soft Pretzels with Sweet Beer Cheese",
     image: blogImage10,
+  },
+];
+
+export const ClientsData = [
+  {
+    id: 1,
+    description:
+      "“Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”",
+    name: "Stephen Tindle",
+    image: clientImage1,
+  },
+
+  {
+    id: 2,
+    description:
+      "“I would be lost without restaurant. I would like to personally thank you for your outstanding product.”",
+    name: "John Doe",
+    image: clientImage2,
+  },
+
+  {
+    id: 3,
+    description:
+      "“I am completely blown away. I would also like to say thank you to all your staff. It's really wonderful.”",
+    name: "Clara",
+    image: clientImage3,
+  },
+
+  {
+    id: 4,
+    description:
+      "“Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”",
+    name: "Nina Margaret",
+    image: clientImage4,
   },
 ];
