@@ -16,6 +16,7 @@ import Button from "../Button";
 import SectionHead from "../SectionHead";
 import UpdateItemQuantity from "../cart/UpdateItemQuantity";
 import toast from "react-hot-toast";
+import Empty from "../Empty";
 
 const initialState = {
   name: "",
@@ -67,6 +68,8 @@ function OrdersList() {
   };
 
   if (!user) return <NoUser />;
+
+  if (!cart.length) return <Empty message="The is No Orders." />;
 
   return (
     <div className="min-h-[calc(100vh-80px)]">
