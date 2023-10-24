@@ -23,9 +23,9 @@ function Cart({ showCart, setShowCart }) {
     <>
       <div
         className={`transition-right fixed  z-50  duration-300 ease-in-out ${
-          showCart ? "right-0" : "right-[-400px]"
+          showCart ? "right-0" : "right-[-100%]"
         } top-[60px]
-      h-[calc(100vh-60px)] w-[300px] border-l-[3px] border-t-[3px] border-gray bg-white md:w-[400px]`}
+      h-[calc(100vh-60px)] w-full border-l-[3px] border-t-[3px] border-gray bg-white md:w-[400px]`}
       >
         <div className="flex h-[40px] items-center justify-between bg-gray px-[10px] font-bold">
           <p>Shopping Cart</p>

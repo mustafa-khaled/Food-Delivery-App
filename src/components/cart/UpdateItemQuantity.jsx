@@ -10,14 +10,14 @@ function UpdateItemQuantity({ id, currentQuantity }) {
   return (
     <div className="flex items-center gap-1 md:gap-3">
       <button
-        className="flex h-[25px] w-[25px] items-center justify-center rounded-full bg-yellow hover:bg-gray"
+        className="flex h-[25px] w-[25px] items-center justify-center rounded-full bg-yellow hover:bg-white"
         onClick={() => dispatch(decreaseItemQuantity(id))}
       >
         -
       </button>
       <span className="text-sm font-medium">{currentQuantity}</span>
       <button
-        className="flex h-[25px] w-[25px] items-center justify-center rounded-full bg-yellow hover:bg-gray"
+        className="flex h-[25px] w-[25px] items-center justify-center rounded-full bg-yellow hover:bg-white"
         onClick={() => dispatch(increaseItemQuantity(id))}
       >
         +
